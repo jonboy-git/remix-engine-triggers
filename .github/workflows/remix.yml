@@ -3,10 +3,12 @@ name: Run Remix Engine
 on:
   schedule:
     - cron: "*/30 * * * *" # every 30 minutes
+  workflow_dispatch: # allows manual trigger from GitHub UI
 
 jobs:
   run-orchestrate:
     runs-on: ubuntu-latest
     steps:
       - name: Call orchestrate endpoint
-        run: curl -X POST https://react-app-setup-4n9i.bolt.host
+        run: curl -X POST https://sportzbar.bolt.host/api/orchestrate
+
