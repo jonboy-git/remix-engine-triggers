@@ -12,3 +12,4 @@ jobs:
       - name: Call orchestrate endpoint
         run: curl -X POST https://sportzbar.bolt.host/api/orchestrate
 
+
