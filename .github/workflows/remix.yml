@@ -1,0 +1,12 @@
+name: Run Remix Engine
+
+on:
+  schedule:
+    - cron: "*/30 * * * *" # every 30 minutes
+
+jobs:
+  run-orchestrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call orchestrate endpoint
+        run: curl -X POST https://react-app-setup-4n9i.bolt.host
